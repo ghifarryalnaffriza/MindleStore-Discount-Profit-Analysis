@@ -37,3 +37,23 @@ Pemisahan layer ini bikin logika cleansing terisolasi dari logika analitik, jadi
 - **Simulasi cap diskon ≤30%:** profit $286 Rb → **$411 Rb (+43,6%)**, margin 12,5% → 20,2%, dengan hanya membuang 11,3% penjualan yang tidak sehat.
 
 ## Struktur Repo
+mindlestore-profit-analysis/
+├── README.md
+├── raw_data/                # dataset mentah (MindleStore.csv)
+├── Analyst/                 # SQL Medallion: Bronze → Silver → Gold
+├── Visualisasi/             # dashboard Power BI (.pbix / export PDF)
+└── Presentation Deck/       # storyline deck (PDF)
+
+## 🛡️ License
+
+Project ini dilisensikan di bawah [MIT License](LICENSE). Bebas dipakai, dimodifikasi, dan dibagikan dengan atribusi yang sesuai.
+
+## 🌟 About Me
+
+Hai! Aku **Ghifarry Alnaffriza**, mahasiswa Pembangunan Ekonomi Kewilayahan di Sekolah Vokasi UGM yang lagi ngebangun jalan sebagai **data/business analyst**. Aku suka ngulik data buat nemuin cerita di balik angka kayak project MindleStore ini.
+
+Yuk connect! Boleh reach out lewat platform berikut:
+
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/ghifarryalnaffriza)
+[![GitHub](https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ghifarryalnaffriza)
+[![Email](https://img.shields.io/badge/EMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ghifaralns@gmail.com)
