@@ -1,19 +1,19 @@
-# MindleStore — Where Did the Profit Go?
+# 💸 MindleStore - Where Did the Profit Go?
 
 > Investigasi kenapa penjualan MindleStore sehat tapi labanya stagnan. Hasilnya: satu kebijakan cap diskon 30% bisa naikkan profit **+43,6%** tanpa menyentuh 89% penjualan yang sehat.
 
-## Business Problem
+## 🎯 Business Problem
 
 MindleStore beroperasi di 4 region & 531 kota dengan penjualan yang terus jalan, tapi laba mandek dan sebagian produk laris justru merugi. Pertanyaan intinya: **di mana margin bocor, dan tuas mana yang paling besar dampaknya untuk memperbaikinya?** Dikerjakan untuk Data Insight Challenge 2026.
 
-## Dataset
+## 📊 Dataset
 
 - **Sumber:** MindleStore (Superstore retail), CSV single-table
 - **Volume:** 9.994 transaksi · 37.873 unit terjual
 - **Dimensi:** 4 region · 531 kota · 3 segmen pelanggan · 3 kategori / 17 sub-kategori
 - **Metrik:** sales, quantity, discount, profit
 
-## Arsitektur & Pendekatan
+## 🏗️ Arsitektur & Pendekatan
 
 Medallion architecture di SQL Server (T-SQL):
 
@@ -23,26 +23,31 @@ Medallion architecture di SQL Server (T-SQL):
 
 Pemisahan layer ini bikin logika cleansing terisolasi dari logika analitik, jadi setiap view Gold bisa dilacak balik ke transformasi Silver yang jelas.
 
-## Tools & Tech
+## 🛠️ Tools & Tech
 
-`SQL Server` · `T-SQL` · `Medallion (Bronze–Silver–Gold)` · `Power BI Desktop` · `Custom Visual (HTML Content)`
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![T-SQL](https://img.shields.io/badge/T--SQL-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Medallion](https://img.shields.io/badge/Medallion_Architecture-4B8BBE?style=for-the-badge&logo=databricks&logoColor=white)
 
-## Key Findings
+## 🔍 Key Findings
 
-- **18,7% transaksi dijual rugi** — masalahnya bukan volume, tapi cara penjualan dihasilkan.
+- **18,7% transaksi dijual rugi:** masalahnya bukan volume, tapi cara penjualan dihasilkan.
 - **Titik kritis diskon ada di 30%.** Band 0% margin +29,5%; di atas 20% setiap band rugi, band 41–60% anjlok ke −40,7%.
 - **Diskon menghancurkan margin secara tak merata:** Appliances jatuh dari +29,7% ke **−255,1%** saat diskon ≥30%; Binders paling berbahaya (volume diskon-tinggi terbanyak, 613 txn).
 - **Ketimpangan wilayah dari kebijakan diskon:** Central mendiskon **2,2× lebih dalam** dari West (24,0% vs 10,9%) dan jadi region paling buntung.
 - **49,6% profit datang dari 3 produk Technology** (Copiers, Phones, Accessories).
 - **Simulasi cap diskon ≤30%:** profit $286 Rb → **$411 Rb (+43,6%)**, margin 12,5% → 20,2%, dengan hanya membuang 11,3% penjualan yang tidak sehat.
 
-## Struktur Repo
+## 📁 Struktur Repo
+```bash
 mindlestore-profit-analysis/
 ├── README.md
 ├── raw_data/                # dataset mentah (MindleStore.csv)
 ├── Analyst/                 # SQL Medallion: Bronze → Silver → Gold
 ├── Visualisasi/             # dashboard Power BI (.pbix / export PDF)
 └── Presentation Deck/       # storyline deck (PDF)
+```
 
 ## 🛡️ License
 
