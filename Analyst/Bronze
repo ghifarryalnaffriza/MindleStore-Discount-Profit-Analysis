@@ -1,10 +1,5 @@
 /* =====================================================================
    MindleStore — BRONZE LAYER
-   Data Insight Challenge 2026
-   Layer: Bronze (raw data, apa adanya dari sumber)
-   Dialect: SQL Server (T-SQL)
-   Catatan: script ini AMAN dijalankan berulang (idempotent) -
-            schema/tabel dicek dulu, dan TRUNCATE mencegah data dobel.
    ===================================================================== */
  
 -- =========================================================
