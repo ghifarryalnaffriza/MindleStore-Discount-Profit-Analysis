@@ -35,7 +35,6 @@ GO
  
 -- =========================================================
 -- Load data
--- TRUNCATE dulu -> mencegah data dobel kalau BULK INSERT diulang
 -- =========================================================
 TRUNCATE TABLE bronze.superstore_sales;
  
